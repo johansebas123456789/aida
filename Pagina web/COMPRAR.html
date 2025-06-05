@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algorify - Compra tu Solución</title>
+  <style>
+    /* ... Tu CSS existente ... */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: #1b5e20;
+      padding: 10px 20px;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .intro {
+      margin-bottom: 30px;
+    }
+
+    .intro h2 {
+      font-size: 28px;
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 18px;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .producto {
+      background-color: #c8e6c9;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+    }
+
+    .producto img {
+      width: 50%;
+      height: 50;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .producto h3 {
+      margin: 10px 0;
+      color: #1b5e20;
+    }
+
+    .producto p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .producto button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .producto button:hover {
+      background-color: #1b5e20;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      gap: 20px;
+    }
+
+    footer img {
+      border-radius:  50px;
+      width: 30px;
+      height: 30px;
+    }
+    /* Agregamos estilos del Modal */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.4); 
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-content input, .modal-content select {
+      width: 90%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .modal-content button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="imagenes/IMG1.jpeg" alt="Logo de Algorify">
+  <h1>Algorify</h1>
+</header>
+
+<nav>
+  <a href="INICIO.html">Inicio</a>
+  <a href="QUIENES SOMOS.html">Quiénes Somos</a>
+  <a href="MISION Y VISION.html">Misión y Visión</a>
+
+</nav>
+
+<main>
+  <div class="intro">
+    <h2>Elige tu Solución Perfecta</h2>
+    <p>En Algorify desarrollamos software hecho a tu medida. Compra ahora tu sistema ideal de manera rápida y segura.</p>
+  </div>
+
+  <div class="productos">
+    <div class="producto">
+      <img src="imagenes/IMG10.jpg" alt="Paquete Básico">
+      <h3>Paquete Básico</h3>
+      <p>Ideal para pequeñas empresas. Sitio web + hosting básico.</p>
+      <button onclick="abrirModal()">Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/IMG11.webp" alt="Paquete Premium">
+      <h3>Paquete Premium</h3>
+      <p>Web + app móvil + asesoría personalizada 24/7.</p>
+      <button onclick="abrirModal()">Comprar</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/IMG12.jpg" alt="Paquete Empresarial">
+      <h3>Paquete Empresarial</h3>
+      <p>Soluciones a gran escala para grandes negocios.</p>
+      <button onclick="abrirModal()">Comprar</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <a href="https://facebook.com" target="_blank"><img src="imagenes/IMG3.png" alt="Facebook"></a>
+  <a href="https://twitter.com" target="_blank"><img src="imagenes/IMG4.jpg" alt="Twitter"></a>
+  <a href="https://instagram.com" target="_blank"><img src="imagenes/IMG2.jpg" alt="Instagram"></a>
+</footer>
+
+<!-- Modal -->
+<div id="miModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <h2>Escoge tu método de pago</h2>
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Correo electrónico">
+    <select>
+      <option>Tarjeta de crédito</option>
+      <option>PayPal</option>
+      <option>Transferencia bancaria</option>
+    </select>
+    <button onclick="cerrarModal()">Continuar</button>
+  </div>
+</div>
+
+<script>
+  function abrirModal() {
+    document.getElementById('miModal').style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById('miModal').style.display = "none";
+  }
+
+  // Para cerrar el modal si el usuario hace clic fuera del contenido
+  window.onclick = function(event) {
+    var modal = document.getElementById('miModal');
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

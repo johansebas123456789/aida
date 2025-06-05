@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algorify - Inicio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: #1b5e20;
+      padding: 10px 20px;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    section#contacto {
+      background-color: #c8e6c9;
+      padding: 30px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    section#contacto h2 {
+      margin-bottom: 20px;
+      color: #1b5e20;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #81c784;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #1b5e20;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      gap: 20px;
+    }
+
+    footer img {
+    border-radius: 50px;
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      alert("¡Formulario enviado exitosamente!");
+    }
+  </script>
+
+</head>
+<body>
+
+<header>
+  <img src="imagenes/IMG1.jpeg" alt="Logo de Algorify">
+  <h1>Algorify</h1>
+</header>
+
+<nav>
+
+  <a href="QUIENES SOMOS.html">Quiénes Somos</a>
+  <a href="MISION Y VISION.html">Misión y Visión</a>
+  <a href="COMPRAR.html">Compra Página</a>
+
+</nav>
+
+<main>
+  <h2>Bienvenido a Algorify</h2>
+  <p>Algorify es una empresa de desarrollo de software que ofrece soluciones digitales personalizadas. Creamos y mantenemos software para mejorar la eficiencia en las empresas. Nuestra calidad nos hace líderes en el sector..</p>
+  <p>Con nosotros, lleva tus ideas al siguiente nivel.</p>
+  
+
+  <section id="contacto">
+    <h2>Contáctenos</h2>
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <a href="https://facebook.com" target="_blank"><img src="imagenes/IMG3.png" alt="Facebook"></a>
+  <a href="https://twitter.com" target="_blank"><img src="imagenes/IMG4.jpg" alt="Twitter"></a>
+  <a href="https://instagram.com" target="_blank"><img src="imagenes/IMG2.jpg" alt="Instagram"></a>
+</footer>
+
+</body>
+</html>
